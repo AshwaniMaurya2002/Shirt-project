@@ -22,6 +22,8 @@ public class Driver {
             System.out.println("Press 10 for ===> Sort all shirts by price low to high");
             System.out.println("Press 11 for ===> Sort all shirts by Brand low to high");
             System.out.println("Press 12 for ===> Sort all shirts by Brand  high to Low");
+            System.out.println("Press 13 for ===> Sort all shirts by Price Then Size");
+
             
 
 
@@ -82,8 +84,13 @@ public class Driver {
 
                 case 12:
                     service.sortBrandAlphabeticalHighToLow();
+                    System.out.println("all shirts are sort on brand alphabetical");
                     break;
 
+                case 13:
+                    service.sortShirtOnPriceLowToHighThenSize();
+                    System.out.println("Sorted by Price then size");
+                    break;
                     case 0:
                         System.exit(0);
                         break;

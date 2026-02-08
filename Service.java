@@ -13,11 +13,11 @@ public class Service {
     public void load(){
         shirt.add(new Shirts("Polo","Red",500,40));
         shirt.add(new Shirts("Levis","Blue",1000,42));
-        shirt.add(new Shirts("Arrow","White",1500,38));
+        shirt.add(new Shirts("Arrow","White",1000,38));
         shirt.add(new Shirts("Van Heusen","Black",2000,36));
         shirt.add(new Shirts("Park Avenue","Green",2500,44));
         shirt.add(new Shirts("Louis Philippe","Yellow",3000,46));
-        shirt.add(new Shirts("Allen Solly","Pink",3500,48));
+        shirt.add(new Shirts("Allen Solly","Pink",1000,28));
         shirt.add(new Shirts("Raymond","Purple",4000,50));
         shirt.add(new Shirts("John Players","Orange",4500,52));
         shirt.add(new Shirts("Flying Machine","Grey",5000,54));
@@ -193,6 +193,19 @@ public class Service {
         }
 
     }
+
+
+
+      //shirt sort on price low to high then size
+    public void sortShirtOnPriceLowToHighThenSize(){
+        List<Shirts> temp = new ArrayList<>(shirt);
+        temp.sort(Comparator.comparingDouble((Shirts s)->s.price).thenComparingInt(s->s.size));
+        for(Shirts s:temp){
+            System.out.println(s);
+        }
+
+    }
+
 
     
 }
