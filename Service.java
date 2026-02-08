@@ -176,9 +176,18 @@ public class Service {
 
 
     //sort shirt according to brand alphabetical
-    public void sortBrandAlphabetical(){
+    public void sortBrandAlphabeticalLowToHigh(){
         List<Shirts> temp=new ArrayList<>(shirt);
         temp.sort(Comparator.comparing((Shirts s) -> s.brand));
+        for(Shirts s: temp){
+            System.out.println(s);
+        }
+
+    }
+
+    public void sortBrandAlphabeticalHighToLow(){
+        List<Shirts> temp=new ArrayList<>(shirt);
+        temp.sort(Comparator.comparing((Shirts s) -> s.brand).reversed());
         for(Shirts s: temp){
             System.out.println(s);
         }
