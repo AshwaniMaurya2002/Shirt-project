@@ -23,6 +23,7 @@ public class Driver {
             System.out.println("Press 11 for ===> Sort all shirts by Brand low to high");
             System.out.println("Press 12 for ===> Sort all shirts by Brand  high to Low");
             System.out.println("Press 13 for ===> Sort all shirts by Price Then Size");
+            System.out.println("Press 14 for ===> Sort all shirts by Price Then Brand");
 
             
 
@@ -91,6 +92,18 @@ public class Driver {
                     service.sortShirtOnPriceLowToHighThenSize();
                     System.out.println("Sorted by Price then size");
                 }
+
+                case 14->{
+                    service.sortShirtOnPriceLowToHighThenBrand();
+                    System.out.println("Sorted by Price then Brand");
+
+                }
+
+                case 15 -> {
+
+                }
+                    
+                    break;
                     case 0 -> System.exit(0);
                 default -> System.out.println("Thank You for using Shirt Project");
             }

@@ -206,6 +206,43 @@ public class Service {
 
     }
 
+    //shirt sort on price low to high then brand
+    public void sortShirtOnPriceLowToHighThenBrand(){
+        List<Shirts> temp = new ArrayList<>(shirt);
+        temp.sort(Comparator.comparingDouble((Shirts s)->s.price).thenComparing(s->s.brand));
+        for(Shirts s:temp){
+            System.out.println(s);
+        }
+
+    }
+
+
+    //?TODO
+
+    //shirt sort by brand alphabetical then price low to high
+    public void sortShirtOnBrandAlphabeticalThenPriceLowToHigh(){
+        List<Shirts> temp = new ArrayList<>(shirt);
+        temp.sort(Comparator.comparing((Shirts s) -> s.brand).thenComparingDouble(s->s.price));
+        for(Shirts s:temp){
+            System.out.println(s);
+        }
+
+    }
+
+    //shirt sort by brand alphabetical then price high to low
+    public void sortShirtOnBrandAlphabeticalThenPriceHighToLow(){
+        List<Shirts> temp = new ArrayList<>(shirt);
+        temp.sort(Comparator.comparing((Shirts s) -> s.brand).thenComparingDouble(s->s.price).reversed());
+        for(Shirts s:temp){
+            System.out.println(s);
+        }
+
+    }
+
+    //design  method to list all brand available
+    
+
+
 
     
 }
