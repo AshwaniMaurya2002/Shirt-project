@@ -32,70 +32,67 @@ public class Driver {
             int choice=sc.nextInt();
 
             switch (choice) {
-                case 1:
+                case 1 -> {
                     service.addShirt();
                     System.out.println("shirt added");
-                    break;
+                }
 
-                case 2:
+                case 2 -> {
                     service.viewAllShirt();
                     System.out.println("all shirts are viewed");
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     service.accessAllShirtOnBrand();
                     System.out.println("all shirts are access on brand");
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     service.accessShirtOnBrandAndSize();
                     System.out.println("all shirts are access on brand and size");
-                    break;
+                }
 
-                case 5:
+                case 5 -> {
                     service.accessShirtOnPriceRange();
                     System.out.println("all shirts are access on price range");
-                    break;
+                }
 
-                case 6:
+                case 6 -> {
                     service.accessShirtOnPriceRangeAndSize();
                     System.out.println("all shirts are access on price range and size");
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     service.sortShirtOnSizeHighToLow();
                     System.out.println("all shirts are sort on size high to low");
-                    break;
-                case 8:
+                }
+                case 8 -> {
                     service.sortShirtOnSizeLowToHigh();
                     System.out.println("all shirts are sort on size low to high");
-                    break;
+                }
 
-                case 9:
+                case 9 -> {
                     service.sortShirtOnPriceHighToLow();
                     System.out.println("all shirts are sort on Price high to low ");
-                    break;
-                case 10:
+                }
+                case 10 -> {
                     service.sortShirtOnPriceLowToHigh();
                     System.out.println("all shirts are sort on Price low to high ");
-                    break;
+                }
 
-                case 11:
+                case 11 -> {
                     service.sortBrandAlphabeticalLowToHigh();
                     System.out.println("all shirts are sort on brand alphabetical");
-                    break;
+                }
 
-                case 12:
+                case 12 -> {
                     service.sortBrandAlphabeticalHighToLow();
                     System.out.println("all shirts are sort on brand alphabetical");
-                    break;
+                }
 
-                case 13:
+                case 13 -> {
                     service.sortShirtOnPriceLowToHighThenSize();
                     System.out.println("Sorted by Price then size");
-                    break;
-                    case 0:
-                        System.exit(0);
-                        break;
-                default:
-                    System.out.println("Thank You for using Shirt Project");
+                }
+                    case 0 -> System.exit(0);
+                default -> System.out.println("Thank You for using Shirt Project");
             }
             System.out.println("Do you Want to Continue??(yes/no)");
             choiceInput=sc.next();
